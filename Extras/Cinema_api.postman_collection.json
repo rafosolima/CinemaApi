@@ -1,0 +1,1187 @@
+{
+	"info": {
+		"_postman_id": "aaba44d8-f9e6-4111-9c79-40e5fb831443",
+		"name": "Cinema_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "movie",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"maturity_rating_id\": 1,\n\t\"name\": \"Vingadores – Ultimato\",\n\t\"sinopse\": \"No filme Vingadores – Ultimato, após os acontecimentos de Guerra Infinita, o universo está em ruínas. Junto dos aliados que ainda restaram, os Vingadores tentarão desfazer as ações de Thanos e restaurar a ordem do universo.\",\n\t\"duration\": 180, \n\t\"imdb\": 8.4,\n\t\"actors\": [2],\n\t\"directors\": [1, 2, 3]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/movie",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"maturity_rating_id\": 1,\n\t\"name\": \"Vingadores – Ultimato\",\n\t\"sinopse\": \"No filme Vingadores – Ultimato, após os acontecimentos de Guerra Infinita, o universo está em ruínas. Junto dos aliados que ainda restaram, os Vingadores tentarão desfazer as ações de Thanos e restaurar a ordem do universo.\",\n\t\"duration\": 180, \n\t\"imdb\": 8.4\n}"
+						},
+						"url": {
+							"raw": "{{api}}/movie/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/movie/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api}}/movie",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api}}/movie/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "rating",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"+18\",\n\t\"description\": \"Faixa etárias para maiores de 18 anos\"\n}"
+						},
+						"url": {
+							"raw": "{{api}}/maturityRating",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"maturityRating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"+18\",\n\t\"description\": \"Faixa etárias para maiores de 18 anos\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/maturityRating/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"maturityRating",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/maturityRating/3",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"maturityRating",
+								"3"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api}}/maturityRating",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"maturityRating"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api}}/maturityRating/8",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"maturityRating",
+								"8"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "actors",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Raphael Lima\"\n}"
+						},
+						"url": {
+							"raw": "{{api}}/actor",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"actor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Raphael Lima\"\n}"
+						},
+						"url": {
+							"raw": "{{api}}/actor/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"actor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api}}/actor/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"actor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/actor",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"actor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/actor/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"actor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "director",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Diretor Fagulhas\"\n}"
+						},
+						"url": {
+							"raw": "{{api}}/director",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"director"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Raphael diretor\"\n}"
+						},
+						"url": {
+							"raw": "{{api}}/director/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"director",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/director/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"director",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/director",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"director"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/director/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"director",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE2MzA2OTcsImV4cCI6MTU5MTY1OTQ5NywibmJmIjoxNTkxNjMwNjk3LCJqdGkiOiJ6Sm1KS1oxTzlPMU9ralNsIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.BEBV_fVCDoc9MkWDVwb8FEo0Ndi5MJJWJaK4e7xmYy0\"",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"raphael 123\",\n\t\"email\": \"teste@teste.com\",\n\t\"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{api}}/user/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvcmVmcmVzaCIsImlhdCI6MTU5MTU1MjA1NiwiZXhwIjoxNTkxNTgwODk3LCJuYmYiOjE1OTE1NTIwOTcsImp0aSI6IktiWmNubHdjVWRWeGxMaVMiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.GEMit-3cBTXb_omaImnJ8sg90_T6L427YemQrj_Ccjs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/user/6",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"user",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvcmVmcmVzaCIsImlhdCI6MTU5MTU1MjA1NiwiZXhwIjoxNTkxNTgwODk3LCJuYmYiOjE1OTE1NTIwOTcsImp0aSI6IktiWmNubHdjVWRWeGxMaVMiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.GEMit-3cBTXb_omaImnJ8sg90_T6L427YemQrj_Ccjs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/user",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Authenticate",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Raphael Lima\",\n\t\"email\": \"raphael.lima.ti@gmail.com\",\n\t\"password\": \"123456\",\n\t\"password_confirmation\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{api}}/auth/register",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"raphael.lima.ti@gmail.com\",\n\t\"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{api}}/auth/login",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1OTE1Mzk2NTIsImV4cCI6MTU5MTU2ODQ1MiwibmJmIjoxNTkxNTM5NjUyLCJqdGkiOiJoSk9KbDhGdjRvYTZWZ2k0Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.JUQ6cBdyFTLcMVOoHMQvBrOh09PfevsMnGlcyyB8CAk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/auth/logout",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvcmVmcmVzaCIsImlhdCI6MTU5MTU1MjA1NiwiZXhwIjoxNTkxNTgwODk3LCJuYmYiOjE1OTE1NTIwOTcsImp0aSI6IktiWmNubHdjVWRWeGxMaVMiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.GEMit-3cBTXb_omaImnJ8sg90_T6L427YemQrj_Ccjs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/auth/refresh",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NpbmVtYV9hcGlcL3B1YmxpY1wvYXBpXC92MVwvYXV0aFwvcmVmcmVzaCIsImlhdCI6MTU5MTU1MjA1NiwiZXhwIjoxNTkxNTgwODk3LCJuYmYiOjE1OTE1NTIwOTcsImp0aSI6IktiWmNubHdjVWRWeGxMaVMiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.GEMit-3cBTXb_omaImnJ8sg90_T6L427YemQrj_Ccjs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/auth/profile",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0b3a7a8c-fe07-4bbd-be43-6e0b2289a146",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0956ce22-4984-4f5f-9fcc-a6f486eb8770",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "27124730-97f1-4258-988c-e397455ea319",
+			"key": "api",
+			"value": "http://localhost/cinema_api/api/v1",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
